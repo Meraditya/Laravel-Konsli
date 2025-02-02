@@ -21,15 +21,15 @@ Route::get('/admins', function () {
     return view('admins');
 });
 
-Route::get('/home', function() {
+Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/project', function () {
-    return view('project');
+Route::get('/master', function () {
+    return view('master');
 });
 
-Route::get('/service', function () {
+Route::get('/services', function () {
     return view('service');
 });
 

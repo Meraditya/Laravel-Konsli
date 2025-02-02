@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         //batch
-        {for($i=1; $i <=10 ; $i++  )(){
+        { for ($i=1; $i <=10 ; $i++ )(){
             DB::table('users')->insert([
                 'name' => str::random(10),.
                 'email' => str::random(10).'@test.com',
