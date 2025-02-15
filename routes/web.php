@@ -29,7 +29,7 @@ Route::get('/master', function () {
     return view('master');
 });
 
-Route::get('/services', function () {
+Route::get('/service', function () {
     return view('service');
 });
 

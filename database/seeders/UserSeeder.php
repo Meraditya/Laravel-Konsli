@@ -2,48 +2,27 @@
 
 namespace Database\Seeders;
 
-use illuminate\Database\Seeder; 
-use Illuminate\Support\Facades\DB;
-use illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\seeder;
+use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\support\str;
-use faker\factory as faker;
+use Faker\Factory as Faker;
+use Illuminate\Support\Facades\DB;
 
-class DatabaseSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        // DB::table('users')->insert([
-        //     'name' => str::random(10),
-        //     'email' => str::random(10).'@test.com',
-        //     'password' => hash::make('admin12345')
-        // ]);
+        $faker = Faker::create();
 
-        //batch
-        { for ($i=1; $i <=10 ; $i++ )(){
+        for ($i = 1; $i <= 5; $i++) {
             DB::table('users')->insert([
-                'name' => str::random(10),.
-                'email' => str::random(10).'@test.com',
-                'password' => Hash::make('admin12345')
+                'name' => $faker->name,
+                'email' => $faker->unique()->safeEmail,
+                'password' => Hash::make('12345678'),
+                'alamat' => $faker->address, 
             ]);
-    
-        }
-        //batch with faker
-        $faker = Faker::create('id_ID');
-
-        for($i=1; $i <=10 ; $i++){
-            DB::table('users')->insert([
-            'name' => $faker->name,
-            'email' => $faker->email,
-            'password' => Hash::make('admin12345')
-            ]);
-            
-
-
         }
     }
 }
