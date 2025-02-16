@@ -40,3 +40,5 @@ return new class extends Migration
         Schema::dropIfExists('transactions');
     }
 };
+
+// belajar migration

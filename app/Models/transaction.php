@@ -9,3 +9,5 @@ class transaction extends Model
 {
     use HasFactory;
 }
+
+// belajar migration

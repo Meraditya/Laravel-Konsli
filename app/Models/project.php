@@ -9,3 +9,5 @@ class project extends Model
 {
     use HasFactory;
 }
+
+// belajar migration

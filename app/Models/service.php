@@ -9,3 +9,5 @@ class service extends Model
 {
     use HasFactory;
 }
+
+// belajar migration

@@ -9,3 +9,5 @@ class court extends Model
 {
     use HasFactory;
 }
+
+// belajar migration
