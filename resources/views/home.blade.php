@@ -26,6 +26,9 @@
                 <li class="nav-item">
                     <a href="{{ route('service.index') }}" class="nav-link text-white"><i class="bi bi-box-seam"></i> Layanan Utama</a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('service.index') }}" class="nav-link text-white"><i class="bi bi-box-seam"></i> master court</a>
+                </li>
             </ul>
             <hr>
             <div class="dropdown">

@@ -1,6 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\CourtTypeController;
+use \App\Http\Controllers\CourtController;
+use \Illuminate\Support\Facades\Route;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,13 +28,18 @@ Route::get('/admins', function () {
 
 Route::get('/home', function () {
     return view('home');
-});
+})->name('home.index');
+
+route::get('/court-type', [CourtTypeController::class, 'index']);
+route::get('/court-type', [CourtTypeController::class, 'store']);
+
+Route::resource('court-type', CourtTypeController::class);
+route::resource('court', CourtController::class);
 
 Route::get('/master', function () {
     return view('master');
-});
+})->name('master.index');
 
 Route::get('/service', function () {
     return view('service');
-});
-
+})->name('service.index');
